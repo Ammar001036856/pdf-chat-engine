@@ -25,7 +25,7 @@ client = OpenAI(
 question =input( "Ask the question?")
 
 response = client.chat.completions.create(
-    model="llama-3.3-70b-versatile",
+    model="openai/gpt-oss-120b",
     messages=[
         {"role": "system", "content": "You are a document assistant. Answer the user's question using ONLY the information in the document provided below. If the answer is not in the document, say 'This information is not found in the document.' Do not use outside knowledge."},
         {"role": "user", "content": f"Document:\n\n{text}\n\nQuestion: {question}"}
